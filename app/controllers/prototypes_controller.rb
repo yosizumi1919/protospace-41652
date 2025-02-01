@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!,only: [:create,:edit,:destroy]
+  before_action :move_to_new, only: [:create, :edit,:destroy]
 
   def index
     @prototypes = Prototype.includes(:user)
@@ -47,10 +47,17 @@ class PrototypesController < ApplicationController
     redirect_to root_path
   end
 
+  
+
   private
   def prototype_params
    params.require(:prototype).permit(:title,:catch_copy,:concept,:image).merge(user_id: current_user.id)
   end
+
+  def move_to_new
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
   
 end
 

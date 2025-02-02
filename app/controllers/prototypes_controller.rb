@@ -1,5 +1,6 @@
 class PrototypesController < ApplicationController
-  before_action :move_to_new, only: [:create,:new, :edit,:destroy]
+  before_action :authenticate_user!, only: [:create,:new, :edit,:destroy]  
+  before_action :move_to_index, only: [:edit]
 
   def index
     @prototypes = Prototype.includes(:user)
@@ -55,7 +56,7 @@ class PrototypesController < ApplicationController
   end
 
   def move_to_new
-    unless user_signed_in?
+    unless user_signed_in? 
       redirect_to user_session_path
     end
   end

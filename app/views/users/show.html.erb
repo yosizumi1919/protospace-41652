@@ -2,30 +2,30 @@
   <div class="inner">
     <div class="user__wrapper">
       <h2 class="page-heading">
-        <%= "#{@prototype_user.name}さんの情報"%>
+        <%= "#{prototype.user.name}さんの情報"%>
       </h2>
       <table class="table">
         <tbody>
           <tr>
             <th class="table__col1">名前</th>
-            <td class="table__col2"><%= "#{@prototype_user.name}" %></td>
+            <td class="table__col2"><%= "#{prototype.user.name}" %></td>
           </tr>
           <tr>
             <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= "#{@prototype_user.name}のプロフィール" %></td>
+            <td class="table__col2"><%= "#{prototype.user.name}のプロフィール" %></td>
           </tr>
           <tr>
             <th class="table__col1">所属</th>
-            <td class="table__col2"><%= "#{@prototype_user.name}の所属" %></td>
+            <td class="table__col2"><%= "#{prototype.user.name}の所属" %></td>
           </tr>
           <tr>
             <th class="table__col1">役職</th>
-            <td class="table__col2"><%= "#{@prototype_user.name}の役職" %></td>
+            <td class="table__col2"><%= "#{prototype.user.name}の役職" %></td>
           </tr>
         </tbody>
       </table>
       <h2 class="page-heading">
-        <%= "#{@prototype_user.name}さんのプロトタイプ"%>
+        <%= "#{prototype.user.name}さんのプロトタイプ"%>
       </h2>
       <div class="user__card">
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>

@@ -57,7 +57,7 @@ class PrototypesController < ApplicationController
 
   def move_to_new
     unless user_signed_in? 
-      redirect_to user_session_path
+      redirect_to root_path
     end
   end
 

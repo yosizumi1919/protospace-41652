@@ -38,7 +38,7 @@ class PrototypesController < ApplicationController
       redirect_to prototype_path(@prototype)
     else
       render :edit, status: :unprocessable_entity
-  end
+    end
   end
 
   def destroy
@@ -58,6 +58,7 @@ class PrototypesController < ApplicationController
     unless user_signed_in?
       redirect_to new_user_session_path
     end
+  end
   
 end
 

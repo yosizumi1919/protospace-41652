@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :move_to_new, only: [:create, :edit,:destroy]
+  before_action :move_to_new, only: [:create,:new, :edit,:destroy]
 
   def index
     @prototypes = Prototype.includes(:user)
